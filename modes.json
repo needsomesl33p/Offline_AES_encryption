@@ -1,0 +1,244 @@
+{
+    "ECB": {
+        "nonce": {
+            "state": "disabled"
+        },
+        "id": 1,
+        "init_size": 0,
+        "segment_size": {
+            "state": "disabled"
+        },
+        "mac_len": {
+            "state": "disabled"
+        },
+        "msg_len": {
+            "state": "disabled"
+        },
+        "initial_value": {
+            "state": "disabled"
+        },
+        "assoc_len": {
+            "state": "disabled"
+        }
+    },
+    "CBC": {
+        "nonce": {
+            "state": "normal"
+        },
+        "id": 2,
+        "init_size": 16,
+        "segment_size": {
+            "state": "disabled"
+        },
+        "mac_len": {
+            "state": "disabled"
+        },
+        "msg_len": {
+            "state": "disabled"
+        },
+        "initial_value": {
+            "state": "disabled"
+        },
+        "assoc_len": {
+            "state": "disabled"
+        }
+    },
+    "CFB": {
+        "nonce": {
+            "state": "normal"
+        },
+        "id": 3,
+        "init_size": 16,
+        "segment_size": {
+            "state": "normal"
+        },
+        "mac_len": {
+            "state": "disabled"
+        },
+        "msg_len": {
+            "state": "disabled"
+        },
+        "initial_value": {
+            "state": "disabled"
+        },
+        "assoc_len": {
+            "state": "disabled"
+        }
+    },
+    "OFB": {
+        "nonce": {
+            "state": "normal"
+        },
+        "id": 5,
+        "init_size": 16,
+        "segment_size": {
+            "state": "disabled"
+        },
+        "mac_len": {
+            "state": "disabled"
+        },
+        "msg_len": {
+            "state": "disabled"
+        },
+        "initial_value": {
+            "state": "disabled"
+        },
+        "assoc_len": {
+            "state": "disabled"
+        }
+    },
+    "CTR": {
+        "nonce": {
+            "state": "normal"
+        },
+        "id": 6,
+        "init_size": 15,
+        "segment_size": {
+            "state": "normal"
+        },
+        "mac_len": {
+            "state": "disabled"
+        },
+        "msg_len": {
+            "state": "disabled"
+        },
+        "initial_value": {
+            "state": "disabled"
+        },
+        "assoc_len": {
+            "state": "disabled"
+        }
+    },
+    "OPENPGP": {
+        "nonce": {
+            "state": "normal"
+        },
+        "id": 7,
+        "init_size": 16,
+        "segment_size": {
+            "state": "disabled"
+        },
+        "mac_len": {
+            "state": "disabled"
+        },
+        "msg_len": {
+            "state": "disabled"
+        },
+        "initial_value": {
+            "state": "disabled"
+        },
+        "assoc_len": {
+            "state": "disabled"
+        }
+    },
+    "CCM": {
+        "nonce": {
+            "state": "normal"
+        },
+        "id": 8,
+        "init_size": 13,
+        "segment_size": {
+            "state": "disabled"
+        },
+        "mac_len": {
+            "state": "normal"
+        },
+        "msg_len": {
+            "state": "normal"
+        },
+        "initial_value": {
+            "state": "disabled"
+        },
+        "assoc_len": {
+            "state": "normal"
+        }
+    },
+    "EAX": {
+        "nonce": {
+            "state": "normal"
+        },
+        "id": 9,
+        "init_size": 16,
+        "segment_size": {
+            "state": "disabled"
+        },
+        "mac_len": {
+            "state": "normal"
+        },
+        "msg_len": {
+            "state": "disabled"
+        },
+        "initial_value": {
+            "state": "disabled"
+        },
+        "assoc_len": {
+            "state": "disabled"
+        }
+    },
+    "SIV": {
+        "nonce": {
+            "state": "normal"
+        },
+        "id": 10,
+        "init_size": 16,
+        "segment_size": {
+            "state": "disabled"
+        },
+        "mac_len": {
+            "state": "disabled"
+        },
+        "msg_len": {
+            "state": "disabled"
+        },
+        "initial_value": {
+            "state": "disabled"
+        },
+        "assoc_len": {
+            "state": "disabled"
+        }
+    },
+    "GCM": {
+        "nonce": {
+            "state": "normal"
+        },
+        "id": 11,
+        "init_size": 16,
+        "segment_size": {
+            "state": "disabled"
+        },
+        "mac_len": {
+            "state": "normal"
+        },
+        "msg_len": {
+            "state": "disabled"
+        },
+        "initial_value": {
+            "state": "disabled"
+        },
+        "assoc_len": {
+            "state": "disabled"
+        }
+    },
+    "OCB": {
+        "nonce": {
+            "state": "normal"
+        },
+        "id": 12,
+        "init_size": 15,
+        "segment_size": {
+            "state": "disabled"
+        },
+        "mac_len": {
+            "state": "normal"
+        },
+        "msg_len": {
+            "state": "disabled"
+        },
+        "initial_value": {
+            "state": "disabled"
+        },
+        "assoc_len": {
+            "state": "disabled"
+        }
+    }
+}
