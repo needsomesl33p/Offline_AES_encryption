@@ -19,6 +19,12 @@
         },
         "assoc_len": {
             "state": "disabled"
+        },
+        "aad": {
+            "state": "disabled"
+        },
+        "mac": {
+            "state": "disabled"
         }
     },
     "CBC": {
@@ -40,6 +46,12 @@
             "state": "disabled"
         },
         "assoc_len": {
+            "state": "disabled"
+        },
+        "aad": {
+            "state": "disabled"
+        },
+        "mac": {
             "state": "disabled"
         }
     },
@@ -63,6 +75,12 @@
         },
         "assoc_len": {
             "state": "disabled"
+        },
+        "aad": {
+            "state": "disabled"
+        },
+        "mac": {
+            "state": "disabled"
         }
     },
     "OFB": {
@@ -85,6 +103,12 @@
         },
         "assoc_len": {
             "state": "disabled"
+        },
+        "aad": {
+            "state": "disabled"
+        },
+        "mac": {
+            "state": "disabled"
         }
     },
     "CTR": {
@@ -94,7 +118,7 @@
         "id": 6,
         "init_size": 15,
         "segment_size": {
-            "state": "normal"
+            "state": "disabled"
         },
         "mac_len": {
             "state": "disabled"
@@ -103,9 +127,15 @@
             "state": "disabled"
         },
         "initial_value": {
-            "state": "disabled"
+            "state": "normal"
         },
         "assoc_len": {
+            "state": "disabled"
+        },
+        "aad": {
+            "state": "disabled"
+        },
+        "mac": {
             "state": "disabled"
         }
     },
@@ -129,6 +159,12 @@
         },
         "assoc_len": {
             "state": "disabled"
+        },
+        "aad": {
+            "state": "disabled"
+        },
+        "mac": {
+            "state": "disabled"
         }
     },
     "CCM": {
@@ -150,6 +186,12 @@
             "state": "disabled"
         },
         "assoc_len": {
+            "state": "normal"
+        },
+        "aad": {
+            "state": "normal"
+        },
+        "mac": {
             "state": "normal"
         }
     },
@@ -173,6 +215,12 @@
         },
         "assoc_len": {
             "state": "disabled"
+        },
+        "aad": {
+            "state": "normal"
+        },
+        "mac": {
+            "state": "normal"
         }
     },
     "SIV": {
@@ -195,6 +243,12 @@
         },
         "assoc_len": {
             "state": "disabled"
+        },
+        "aad": {
+            "state": "normal"
+        },
+        "mac": {
+            "state": "normal"
         }
     },
     "GCM": {
@@ -217,6 +271,12 @@
         },
         "assoc_len": {
             "state": "disabled"
+        },
+        "aad": {
+            "state": "normal"
+        },
+        "mac": {
+            "state": "normal"
         }
     },
     "OCB": {
@@ -239,6 +299,12 @@
         },
         "assoc_len": {
             "state": "disabled"
+        },
+        "aad": {
+            "state": "normal"
+        },
+        "mac": {
+            "state": "normal"
         }
     }
 }

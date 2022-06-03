@@ -1,11 +1,11 @@
+from __future__ import annotations
 import base64
 import secrets
-import codecs
-from binascii import hexlify
-from typing import Any
+import json
+from typing import Dict, List
 
 
-def base64_encode(*args, **kwargs):
+def base64_encode(*args, **kwargs) -> str | List | Dict:
     result = None
 
     if args:
@@ -21,7 +21,7 @@ def base64_encode(*args, **kwargs):
     return result[0] if len(result) == 1 else result
 
 
-def base64_decode(*args, **kwargs) -> list or dict:
+def base64_decode(*args, **kwargs) -> str | List | Dict:
     result = None
 
     if args:
@@ -37,13 +37,23 @@ def base64_decode(*args, **kwargs) -> list or dict:
     return result[0] if len(result) == 1 else result
 
 
-def gen_iv(size: int) -> bytes:
+def sort_dict(_dict: dict) -> None:
+    cpy_dict: dict = _dict.copy()
+    for key, value in cpy_dict.items():
+        if not value:
+            del _dict[key]
+
+
+def gen_secret(size: int) -> bytes:
     return secrets.token_bytes(size)
 
 
-def hex_encode(bytes_obj: bytes) -> str:
-    return hexlify(bytes_obj)
+def load_config(path: str) -> dict:
+    with open(path, 'r') as file:
+        return json.load(file)
 
 
-def hex_decode(hex_string: str) -> bytes:
-    return codecs.decode(hex_string, 'hex_codec')
+def convert_byte2string(comps: dict) -> dict:
+    for item, value in comps.items():
+        if isinstance(value, bytes):
+            comps[item] = value.decode('utf-8')

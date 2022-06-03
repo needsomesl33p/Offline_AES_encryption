@@ -1,10 +1,11 @@
-from tkinter import Tk, Canvas, PhotoImage, Frame, Widget, Text
-from typing import List, Tuple
+from tkinter import Tk, Canvas, PhotoImage, Frame, Widget
+from typing import List
 
 
 class GUIWizard:
-    '''Defines a tkinter window and frames/panels to make the GUI development more transparent and easier. 
-    Think in panels and design your application according to them. Tear down your GUI to panels and put the widgets on.'''
+    '''Defines a tkinter window and frames/panels to make the GUI development more transparent and easier.
+    Think in panels and design your application according to them.
+    Tear down your GUI to panels and put the widgets on.'''
 
     def __init__(self, window_title: str, window_width: int, window_height: int, padx: int, pady: int,
                  canvas_width=None, canvas_height=None, image_path=None) -> None:
@@ -38,7 +39,6 @@ class GUIWizard:
         '''Returns a Widget component. You need to provide the number of the panel where the specific component can be located.'''
         panel = self._panels[panel_number]
         components = panel.winfo_children()
-        print(components)
         for item in components:
             name = self.get_packed_widget_name(str(item))
             if name == component_name:
@@ -67,7 +67,8 @@ class GUIWizard:
         self._panels = frames
 
     def pack_on_panel(self, wigets: List[Widget], packing_params: dict) -> None:
-        '''Packs every Widget in the list on on the panel. By the tkinter design, you need to provide the parent of the child wiget, which is the panel.'''
+        '''Packs every Widget in the list on on the panel. 
+        By the tkinter design, you need to provide the parent of the child widget, which is the panel.'''
         for item in wigets:
             name = self.get_packed_widget_name(str(item))
             if name in packing_params.keys():
@@ -86,36 +87,15 @@ class GUIWizard:
             frame.pack(side='left', expand=True)
 
 
-# class CustomText(Text):
-#     def __init__(self, *args, **kwargs):
-#         """A text widget that report on internal widget commands"""
-#         Text.__init__(self, *args, **kwargs)
+class CryptInputException(Exception):
+    '''Raised when no input data was provided in the en/decryption textboxes or both are filled.'''
 
-#         # create a proxy for the underlying widget
-#         self._orig = self._w + "_orig"
-#         self.tk.call("rename", self._w, self._orig)
-#         self.tk.createcommand(self._w, self._proxy)
+    def __init__(self):
+        self.message = '''No data was provided or both textbox are filled!
+        Please fill only one textbox at least!'''
 
-#     def _proxy(self, command, *args):
-#         cmd = (self._orig, command) + args
-#         result = self.tk.call(cmd)
+class SIVNonceException(Exception):
+    '''Raised when Nonce entry is empty in case of SIV encryption mode.'''
 
-#         if command in ("insert", "delete", "replace"):
-#             self.event_generate("<<TextModified>>")
-
-#         return result
-
-
-# class CryptInputException(Exception):
-#     '''Raised when no input data was provided in the en/decryption textboxes. Or when both of them filled out.'''
-
-#     def __init__(self):
-#         self.message = 'Concurrent operation detected or no data was provided! Please clear or fill only one textbox!'
-
-
-# class IncorretKeySizeException(Exception):
-#     '''Raised when the key size does not match the given key's length.'''
-
-#     def __init__(self):
-#         self.message = f'Key size does not match with key length. Follow the rules: KeySize - CharacterLength\n {list(KEY_SIZES.items())}.' \
-#             '\nExcept SIV, for MODE_SIV it doubles to 32, 48, or 64 bytes.'
+    def __init__(self):
+        self.message = '''Nonce cannot be empty when SIV mode is selected!'''
