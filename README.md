@@ -33,7 +33,7 @@ These will be also converted to bytestrings.
 
 ## Decrypt Data:
 
-![Decryption](https://raw.githubusercontent.com/needsomesl33p/Offline_AES_encryption/master/images/decryption.png)
+![Decryption](https://raw.githubusercontent.com/needsomesl33p/Offline_AES_encryption/master/images/decryption.gif)
 
 ## Output format:
 ```json
