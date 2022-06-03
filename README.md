@@ -3,14 +3,18 @@ A GUI-based Python3 AES encryption and decryption application, which can be used
 
 The application uses the `pycryptodome` python3 library to encrypt and decrypt data.
 
-Since AES operates with bytes every input and output is base64 encoded, expect the `key` and the `AAD` (Additional Authentication Data). They can be unencoded, for example:
+Since AES operates with bytes every input and output is base64 encoded, expect the `key` and the `AAD` (Additional Authentication Data). They can be unencoded, for example here is a 16 bytes long key:
 
 ```python
 >>> len('16byteslongkey#1')
 16
 ```
 
-These will be also converted to bytestrings.
+You can set up the encoding with 2 radiobuttons, but in the end they will be also converted to bytestrings.
+
+If you have a key which is more then 32 bytes or 256 bit, you can use `PBKDF2` function to derive your AES key. 
+
+The padding and mode of operation can be selected from dropdown menus as the below GIFs show.
 
 
 ## Installation
@@ -57,8 +61,8 @@ These will be also converted to bytestrings.
 
 ## Project Aim
 
-During pentration tests and security assessments you can find encrypted data and the belongig keys in KeyChain and KeyStore or other locations. However it might be hard to identify and decrypt the secrets. Lack of information sometimes lead to fail to decrypt secrets or encrypted data, because you might not recognise a necessary parameters or the mode of operation.
+During pentration tests and security assessments you can find encrypted data and the belonging keys in KeyChain and KeyStore or other locations. However it might be hard to identify and decrypt the secrets. Lack of information sometimes lead to fail to decrypt secrets or encrypted data, because you might not recognise the necessary parameters or right mode of operation.
 
 The app's GUI shows the possible parameters and the mode of operations, which helps you during the encryption and decryption process.
 
-Also practising programming in python3.
+Also practising programming in python3. 
