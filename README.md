@@ -21,6 +21,24 @@ The padding and mode of operation can be selected from dropdown menus as the bel
 
 `pip3 install -r requirements.txt`
 
+### Ubuntu
+
+`sudo apt-get install python3-tk`
+
+### Mac
+
+`sudo brew install python-tk`
+
+or
+
+`sudo brew install python-tk@3.9`
+
+### Windows
+
+Download the binary and check the TK lib during the installation process
+
+https://www.python.org/downloads/
+
 ## Running
 
 `python3 main.py`
@@ -38,6 +56,14 @@ The padding and mode of operation can be selected from dropdown menus as the bel
 ## Decrypt Data:
 
 ![Decryption](https://raw.githubusercontent.com/needsomesl33p/Offline_AES_encryption/master/images/decryption.gif)
+
+## Running on Ubuntu:
+
+![Ubuntu20](https://raw.githubusercontent.com/needsomesl33p/Offline_AES_encryption/master/images/ubuntu.png)
+
+## Running on Windows 10:
+
+![Win10](https://raw.githubusercontent.com/needsomesl33p/Offline_AES_encryption/master/images/windows.png)
 
 ## Output format:
 ```json
